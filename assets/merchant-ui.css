@@ -1,0 +1,72 @@
+/* E-TALK merchant plugin only: no selectors affect WordPress theme checkout. */
+.etalk-design-preview{margin:26px 0 18px;max-width:1120px;color:var(--etalk-ink,#17202e)}
+.etalk-design-preview h2{font-size:22px;font-weight:700;margin-bottom:7px}
+.etalk-preview-intro,.etalk-preview-foot{color:#606b78;line-height:1.65}
+.etalk-preview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0 12px}
+.etalk-preview-card{box-sizing:border-box;min-width:0;padding:22px;border:1px solid #e1e4e8;border-radius:16px;background:#fff;box-shadow:0 5px 20px rgba(11,19,33,.04);color:#17202e}
+.etalk-preview-head{display:flex;align-items:center;gap:12px}
+.etalk-preview-logo{height:48px;width:48px;border-radius:13px;background:#fff5ec;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.etalk-preview-logo img{max-width:40px;max-height:40px;object-fit:contain}
+.etalk-preview-name{min-width:0;display:flex;flex-direction:column;gap:5px;flex:1}
+.etalk-preview-name strong{font-size:16px;overflow-wrap:anywhere}
+.etalk-preview-name span{font-size:12px;color:#667285}
+.etalk-preview-tag{border-radius:99px;padding:5px 9px;background:#f1f2f4;color:#46515f;font-size:11px;flex-shrink:0}
+.etalk-preview-card>p{font-size:14px;line-height:1.6;margin:18px 0;color:#344054;min-height:46px}
+.etalk-preview-meta{border-radius:9px;background:#f5f6f8;padding:11px 12px;font-size:12px;color:#485364}
+.etalk-preview-button{display:flex;justify-content:space-between;align-items:center;background:#e96500;color:#fff;border-radius:10px;margin-top:17px;font-size:14px;font-weight:700;padding:14px 16px;opacity:.75;cursor:not-allowed}
+.etalk-preview-foot{font-size:12px}
+@media(max-width:750px){.etalk-preview-grid{grid-template-columns:1fr}.etalk-preview-card{padding:16px}.etalk-preview-card>p{min-height:0}}
+@media(prefers-color-scheme:dark){.etalk-design-preview{color:inherit}.etalk-preview-card{background:#1d2027;color:#f4f6f9;border-color:#353943}.etalk-preview-card>p{color:#e2e5ec}.etalk-preview-meta{background:#282d36;color:#d4d8e0}.etalk-preview-tag{background:#353b46;color:#f6f7fa}.etalk-preview-name span,.etalk-preview-intro,.etalk-preview-foot{color:#acb5c3}}
+
+/* D335.9: isolated, admin-only customer checkout appearance sandbox. */
+.etalk-checkout-sandbox{margin:20px 0 12px;border-radius:18px;padding:24px;background:#f7f8fa;color:#18202c;border:1px solid #e5e8ed;max-width:1120px;box-sizing:border-box}
+.etalk-sandbox-toolbar{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.etalk-sandbox-toolbar h3{font-size:20px;margin:0 0 5px}.etalk-sandbox-toolbar p{margin:0 0 16px;color:#626c7a}
+.etalk-sandbox-mode{padding:7px 10px;background:#fff4e8;color:#a54600;border-radius:99px;font-weight:650;font-size:12px}
+.etalk-sandbox-shell{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,1fr);gap:16px}
+.etalk-sandbox-choice,.etalk-sandbox-review{padding:20px;border-radius:14px;background:#fff;box-shadow:0 2px 9px rgba(17,24,39,.035);min-width:0}
+.etalk-sandbox-choice h4,.etalk-sandbox-review h4{margin:0 0 14px;font-size:16px}
+.etalk-sandbox-option{display:flex;align-items:center;gap:11px;border:1px solid #e2e5ea;border-radius:12px;padding:12px;margin:10px 0;cursor:pointer;background:#fff}
+.etalk-sandbox-option:has(input:checked){border-color:#ed710c;background:#fff7ef}
+.etalk-sandbox-option input{accent-color:#e96500;flex:none}.etalk-sandbox-option img{width:36px;height:36px;object-fit:contain;border-radius:9px}
+.etalk-sandbox-option-copy{display:flex;flex-direction:column;gap:4px;min-width:0}.etalk-sandbox-option-copy strong{overflow-wrap:anywhere}.etalk-sandbox-option-copy small{color:#586375;line-height:1.45}
+.etalk-sandbox-detail{padding:12px 14px;border-radius:10px;background:#f5f6f8;margin-top:12px}.etalk-sandbox-detail[hidden]{display:none!important}
+.etalk-sandbox-detail p{margin:7px 0 0;line-height:1.6;color:#4b586b}
+.etalk-sandbox-security{margin:16px 0 0;color:#596778;font-size:12px}
+.etalk-sandbox-review>div{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #edf0f3}
+.etalk-sandbox-total{font-size:17px}.etalk-sandbox-review button{width:100%;border:0;border-radius:10px;padding:13px;margin:18px 0 8px;background:#d6d9dd;color:#465262;cursor:not-allowed;font-weight:700}
+.etalk-sandbox-review small{display:block;color:#606b78}
+@media(max-width:760px){.etalk-checkout-sandbox{padding:12px}.etalk-sandbox-shell{grid-template-columns:1fr}.etalk-sandbox-choice,.etalk-sandbox-review{padding:15px}}
+@media(prefers-color-scheme:dark){.etalk-checkout-sandbox{background:#171b22;color:#f4f6f8;border-color:#303744}.etalk-sandbox-choice,.etalk-sandbox-review{background:#242932;color:#f4f6f8}.etalk-sandbox-toolbar p,.etalk-sandbox-option-copy small,.etalk-sandbox-security,.etalk-sandbox-review small{color:#bbc4d1}.etalk-sandbox-option{background:#242932;border-color:#48505d;color:#f4f6f8}.etalk-sandbox-option:has(input:checked){background:#382b22;border-color:#f0842c}.etalk-sandbox-detail{background:#303641}.etalk-sandbox-detail p{color:#d1d8e1}.etalk-sandbox-review>div{border-color:#434957}}
+
+/* D335.9.1 — checkout sandbox is a sibling of the two-card grid, not a grid item. */
+.etalk-design-preview>.etalk-checkout-sandbox{display:block;clear:both;width:100%;max-width:1120px;min-width:0;margin:24px 0 16px}
+.etalk-design-preview .etalk-checkout-sandbox .etalk-sandbox-toolbar h3,
+.etalk-design-preview .etalk-checkout-sandbox .etalk-sandbox-choice h4,
+.etalk-design-preview .etalk-checkout-sandbox .etalk-sandbox-review h4{color:#18202c;font-weight:700;opacity:1;line-height:1.35}
+.etalk-design-preview .etalk-checkout-sandbox .etalk-sandbox-shell{width:100%;grid-template-columns:minmax(0,1.4fr) minmax(280px,1fr)}
+.etalk-design-preview .etalk-checkout-sandbox .etalk-sandbox-option-copy{flex:1;min-width:0}
+.etalk-design-preview .etalk-checkout-sandbox .etalk-sandbox-option-copy small{white-space:normal;overflow-wrap:normal}
+@media(max-width:800px){.etalk-design-preview .etalk-checkout-sandbox .etalk-sandbox-shell{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-color-scheme:dark){
+ .etalk-design-preview .etalk-checkout-sandbox .etalk-sandbox-toolbar h3,
+ .etalk-design-preview .etalk-checkout-sandbox .etalk-sandbox-choice h4,
+ .etalk-design-preview .etalk-checkout-sandbox .etalk-sandbox-review h4{color:#f4f6f8}
+}
+
+/* Checkout payment verification panel. Scoped to E-TALK only. */
+.etalk-pay-launch{padding:12px 0}.etalk-pay-open,.etalk-pay-done{background:#e9690b!important;color:#fff!important;border:0!important;border-radius:10px!important;padding:13px 20px!important;font-weight:650!important;cursor:pointer}.etalk-pay-hint{font-size:13px;color:inherit;opacity:.72;margin:10px 0}.etalk-pay-overlay{position:fixed;inset:0;z-index:100000;background:rgba(10,15,24,.72);display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box}.etalk-pay-dialog{width:min(100%,510px);max-height:min(90vh,860px);display:flex;flex-direction:column;background:#fff;color:#19212c;border-radius:18px;box-shadow:0 18px 60px rgba(0,0,0,.28);overflow:hidden}.etalk-pay-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid #e6e8eb;padding:22px 24px 16px}.etalk-pay-heading strong{font-size:19px}.etalk-pay-heading p{font-size:12px;color:#667085;margin:5px 0 0}.etalk-pay-close{border:0!important;background:transparent!important;color:inherit!important;font-size:28px;line-height:1;cursor:pointer;padding:0 5px}.etalk-pay-body{padding:4px 24px 18px;overflow-y:auto;overscroll-behavior:contain}.etalk-pay-body input{box-sizing:border-box;max-width:100%!important;border:1px solid #c9ced6!important;border-radius:8px!important;padding:12px!important;margin:5px 0 13px!important;min-height:44px}.etalk-pay-body button{border-radius:8px;padding:11px 14px;cursor:pointer}.etalk-pay-body button:disabled{opacity:.55;cursor:not-allowed}.etalk-pay-footer{padding:14px 24px;border-top:1px solid #e6e8eb}.etalk-pay-done{width:100%}.etalk-pay-grip{display:none}.etalk-pay-dialog :focus-visible,.etalk-pay-launch :focus-visible{outline:3px solid #f28b31;outline-offset:3px}
+@media(max-width:650px){.etalk-pay-overlay{padding:0;align-items:flex-end}.etalk-pay-dialog{width:100%;max-height:94dvh;max-height:94vh;border-radius:20px 20px 0 0}.etalk-pay-grip{display:block;width:42px;height:5px;background:#b8bdc5;border-radius:99px;margin:10px auto 0}.etalk-pay-heading{padding:16px 18px 14px}.etalk-pay-body{padding:0 18px 12px}.etalk-pay-footer{padding:12px 18px max(12px,env(safe-area-inset-bottom))}}
+@media(prefers-reduced-motion:no-preference){.etalk-pay-dialog{animation:etalk-enter .18s ease-out}@keyframes etalk-enter{from{opacity:.5;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}}
+
+/* D335.58 checkout-only layout hardening; CSS loaded on storefront checkout. */
+body .etalk-pay-overlay{position:fixed!important;inset:0!important;z-index:2147483000!important;display:flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;overflow-y:auto!important;background:rgba(8,13,22,.66)!important;padding:18px!important}
+body .etalk-pay-overlay .etalk-pay-dialog{position:relative!important;box-sizing:border-box!important;max-width:520px!important;width:100%!important;max-height:calc(100dvh - 36px)!important;margin:0 auto!important;background:#fff!important;color:#19212c!important;display:flex!important;flex-direction:column!important;overflow:hidden!important;min-width:0!important;border-radius:18px!important;box-shadow:0 16px 70px rgba(0,0,0,.25)!important}
+body .etalk-pay-overlay .etalk-pay-body{min-height:0!important;overflow:auto!important;flex:1 1 auto!important;padding:12px 24px 18px!important}
+body .etalk-pay-overlay .etalk-pay-heading{flex:0 0 auto!important}
+body .etalk-pay-overlay .etalk-pay-footer{flex:0 0 auto!important}
+body .etalk-pay-overlay .etalk-pay-body label{display:block!important;max-width:100%!important;white-space:normal!important}
+body .etalk-pay-overlay .etalk-pay-body input{width:100%!important;max-width:100%!important;min-width:0!important;display:block!important}
+body .etalk-pay-overlay .etalk-pay-body button{max-width:100%!important;white-space:normal!important}
+body .etalk-pay-inline{max-width:100%;box-sizing:border-box}
+@media(max-width:650px){body .etalk-pay-overlay{align-items:flex-end!important;padding:0!important}body .etalk-pay-overlay .etalk-pay-dialog{max-width:100%!important;max-height:94dvh!important;max-height:94vh!important;margin:0!important;border-radius:20px 20px 0 0!important}body .etalk-pay-overlay .etalk-pay-body{padding:10px 18px 12px!important}}
