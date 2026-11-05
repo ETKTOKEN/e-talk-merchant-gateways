@@ -1,1 +1,28 @@
-(function($){'use strict';$(document).on('click','.etalk-verify-button',function(){var b=$(this), out=b.closest('td').find('.etalk-verify-result');b.prop('disabled',true);out.text('Checking secure connection…');$.ajax({url:window.ajaxurl,method:'POST',dataType:'json',data:{action:'etalk_verify_connection',nonce:b.attr('data-nonce'),channel:b.attr('data-channel')},timeout:20000}).done(function(res){out.text((res&&res.data&&res.data.message)?res.data.message:'No connection result.');}).fail(function(xhr){var msg=xhr.responseJSON&&xhr.responseJSON.data&&xhr.responseJSON.data.message;out.text(msg||'Unable to verify connection.');}).always(function(){b.prop('disabled',false);});});})(jQuery);
+(function ($) {
+  'use strict';
+
+  $(document).on('click', '.etalk-verify-button', function () {
+    var b = $(this),
+      out = b.closest('td').find('.etalk-verify-result');
+    b.prop('disabled', true);
+    out.text('Checking secure connection…');
+    $.ajax({
+      url: window.ajaxurl,
+      method: 'POST',
+      dataType: 'json',
+      data: {
+        action: 'etalk_verify_connection',
+        nonce: b.attr('data-nonce'),
+        channel: b.attr('data-channel')
+      },
+      timeout: 20000
+    }).done(function (res) {
+      out.text(res && res.data && res.data.message ? res.data.message : 'No connection result.');
+    }).fail(function (xhr) {
+      var msg = xhr.responseJSON && xhr.responseJSON.data && xhr.responseJSON.data.message;
+      out.text(msg || 'Unable to verify connection.');
+    }).always(function () {
+      b.prop('disabled', false);
+    });
+  });
+})(jQuery);
